@@ -23,4 +23,7 @@ import CountsController from 'App/Controllers/Http/CountsController'
 Route.group(() => {
   
   Route.resource('/count', "CountsController").apiOnly()
+  Route.resource('/count/:accountId/wallet', "WalletsController").apiOnly()
+  Route.put('/wallet/:id', "WalletsController.updateBalance")
+  Route.delete('/wallet/:id', "WalletsController.destroyWallet")
 }).prefix('/api')

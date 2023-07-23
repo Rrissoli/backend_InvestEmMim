@@ -5,9 +5,6 @@ export async function createAccount(body: any) {
         
         const account = await Count.create(body)
         
-        
-        
-        
         const sentence = account.$isPersisted ? account : false
         return sentence
     } catch (error) {

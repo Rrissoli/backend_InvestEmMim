@@ -1,8 +1,14 @@
 import { DateTime } from 'luxon'
-import { BaseModel, beforeSave, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, HasMany, beforeSave, column, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import Hash from '@ioc:Adonis/Core/Hash'
+import Wallet from './Wallet'
 
 export default class Count extends BaseModel {
+  @hasMany(() => Wallet)
+  public wallets: HasMany<typeof Wallet>
+
+
+
   @column({ isPrimary: true })
   public id: number
   
@@ -20,8 +26,7 @@ export default class Count extends BaseModel {
   public value:number
   @column()
   public cpfOuCnpj:number
-  @column()
-  public idWalletFii:number
+  
   @column()
   public idHistorical:number
   @column.dateTime({ autoCreate: true })
