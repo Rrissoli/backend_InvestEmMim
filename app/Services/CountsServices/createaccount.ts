@@ -3,8 +3,8 @@ import Count from "App/Models/Count";
 export async function createAccount(body: any) {
     try {
         
-        const account = await Count.create({...body})
-        console.log(account)
+        const account = await Count.create(body)
+        
         
         
         
