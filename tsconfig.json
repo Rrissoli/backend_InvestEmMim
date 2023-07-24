@@ -8,6 +8,8 @@
     "build"
   ],
   "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
     "outDir": "build",
     "rootDir": "./",
     "sourceMap": true,
@@ -23,7 +25,8 @@
       ],
       "Database/*": [
         "./database/*"
-      ]
+      ],
+      "types": ["jest"]
     },
     "types": [
       "@adonisjs/core",
