@@ -1,6 +1,7 @@
-import Count from "App/Models/Count";
+import Count from "App/Models/Count"
 
-export async function createAccount(body: any) {
+
+export default async function createAccount(body: any) {
     try {
         
         const account = await Count.create(body)

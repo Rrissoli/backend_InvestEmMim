@@ -1,12 +1,14 @@
 {
   "extends": "adonis-preset-ts/tsconfig.json",
   "include": [
-    "**/*"
+    "**/*",
+    "app/Models/Count.ts"
   ],
   "exclude": [
     "node_modules",
     "build"
   ],
+  "baseUrl": ".",
   "compilerOptions": {
     "esModuleInterop": true,
     "module": "commonjs",
@@ -14,6 +16,7 @@
     "rootDir": "./",
     "sourceMap": true,
     "paths": {
+      
       "App/*": [
         "./app/*"
       ],
@@ -26,7 +29,9 @@
       "Database/*": [
         "./database/*"
       ],
-      "types": ["jest"]
+      "types": [
+        "jest"
+      ]
     },
     "types": [
       "@adonisjs/core",

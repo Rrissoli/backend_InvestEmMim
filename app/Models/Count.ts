@@ -1,7 +1,8 @@
 import { DateTime } from 'luxon'
-import { BaseModel, HasMany, beforeSave, column, hasMany } from '@ioc:Adonis/Lucid/Orm'
+
 import Hash from '@ioc:Adonis/Core/Hash'
 import Wallet from './Wallet'
+import { BaseModel, HasMany, beforeSave, column, hasMany } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Count extends BaseModel {
   @hasMany(() => Wallet)
